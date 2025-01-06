@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PiggyApp: App {
+    @StateObject private var dataManager = DataManager.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
+                .environmentObject(dataManager)
         }
     }
 }
