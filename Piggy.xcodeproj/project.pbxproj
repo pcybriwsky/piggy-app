@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBCBCDAB2D2CA11B00F16503 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCBCDAA2D2CA11B00F16503 /* WidgetKit.framework */; };
+		EBCBCDAD2D2CA11B00F16503 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBCBCDAC2D2CA11B00F16503 /* SwiftUI.framework */; };
+		EBCBCDBE2D2CA11F00F16503 /* PiggyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EBCBCDA82D2CA11B00F16503 /* PiggyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EBCBCCD12D288F5800F16503 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,62 @@
 			remoteGlobalIDString = EBCBCCBF2D288F5400F16503;
 			remoteInfo = Piggy;
 		};
+		EBCBCDBC2D2CA11F00F16503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBCBCCB82D288F5400F16503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBCBCDA72D2CA11B00F16503;
+			remoteInfo = PiggyWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBCBCDC32D2CA11F00F16503 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EBCBCDBE2D2CA11F00F16503 /* PiggyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EBCBCCC02D288F5400F16503 /* Piggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Piggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCBCCD02D288F5800F16503 /* PiggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCBCCDA2D288F5800F16503 /* PiggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCBCDA82D2CA11B00F16503 /* PiggyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PiggyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBCBCDAA2D2CA11B00F16503 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		EBCBCDAC2D2CA11B00F16503 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		EBCBCDC52D2CA1CB00F16503 /* PiggyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiggyWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EBCBCDBF2D2CA11F00F16503 /* Exceptions for "PiggyWidget" folder in "PiggyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EBCBCDA72D2CA11B00F16503 /* PiggyWidgetExtension */;
+		};
+		EBCBCDC72D2CA2A400F16503 /* Exceptions for "Piggy" folder in "PiggyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models.swift,
+			);
+			target = EBCBCDA72D2CA11B00F16503 /* PiggyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EBCBCCC22D288F5400F16503 /* Piggy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EBCBCDC72D2CA2A400F16503 /* Exceptions for "Piggy" folder in "PiggyWidgetExtension" target */,
+			);
 			path = Piggy;
 			sourceTree = "<group>";
 		};
@@ -43,6 +94,14 @@
 		EBCBCCDD2D288F5800F16503 /* PiggyUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PiggyUITests;
+			sourceTree = "<group>";
+		};
+		EBCBCDAE2D2CA11B00F16503 /* PiggyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EBCBCDBF2D2CA11F00F16503 /* Exceptions for "PiggyWidget" folder in "PiggyWidgetExtension" target */,
+			);
+			path = PiggyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +128,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBCBCDA52D2CA11B00F16503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCBCDAD2D2CA11B00F16503 /* SwiftUI.framework in Frameworks */,
+				EBCBCDAB2D2CA11B00F16503 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EBCBCCB72D288F5400F16503 = {
 			isa = PBXGroup;
 			children = (
+				EBCBCDC52D2CA1CB00F16503 /* PiggyWidgetExtension.entitlements */,
 				EBCBCCC22D288F5400F16503 /* Piggy */,
 				EBCBCCD32D288F5800F16503 /* PiggyTests */,
 				EBCBCCDD2D288F5800F16503 /* PiggyUITests */,
+				EBCBCDAE2D2CA11B00F16503 /* PiggyWidget */,
+				EBCBCDA92D2CA11B00F16503 /* Frameworks */,
 				EBCBCCC12D288F5400F16503 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +159,18 @@
 				EBCBCCC02D288F5400F16503 /* Piggy.app */,
 				EBCBCCD02D288F5800F16503 /* PiggyTests.xctest */,
 				EBCBCCDA2D288F5800F16503 /* PiggyUITests.xctest */,
+				EBCBCDA82D2CA11B00F16503 /* PiggyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EBCBCDA92D2CA11B00F16503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBCBCDAA2D2CA11B00F16503 /* WidgetKit.framework */,
+				EBCBCDAC2D2CA11B00F16503 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +183,12 @@
 				EBCBCCBC2D288F5400F16503 /* Sources */,
 				EBCBCCBD2D288F5400F16503 /* Frameworks */,
 				EBCBCCBE2D288F5400F16503 /* Resources */,
+				EBCBCDC32D2CA11F00F16503 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBCBCDBD2D2CA11F00F16503 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				EBCBCCC22D288F5400F16503 /* Piggy */,
@@ -163,6 +246,28 @@
 			productReference = EBCBCCDA2D288F5800F16503 /* PiggyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EBCBCDA72D2CA11B00F16503 /* PiggyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBCBCDC02D2CA11F00F16503 /* Build configuration list for PBXNativeTarget "PiggyWidgetExtension" */;
+			buildPhases = (
+				EBCBCDA42D2CA11B00F16503 /* Sources */,
+				EBCBCDA52D2CA11B00F16503 /* Frameworks */,
+				EBCBCDA62D2CA11B00F16503 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EBCBCDAE2D2CA11B00F16503 /* PiggyWidget */,
+			);
+			name = PiggyWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = PiggyWidgetExtension;
+			productReference = EBCBCDA82D2CA11B00F16503 /* PiggyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +289,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = EBCBCCBF2D288F5400F16503;
 					};
+					EBCBCDA72D2CA11B00F16503 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = EBCBCCBB2D288F5400F16503 /* Build configuration list for PBXProject "Piggy" */;
@@ -203,6 +311,7 @@
 				EBCBCCBF2D288F5400F16503 /* Piggy */,
 				EBCBCCCF2D288F5800F16503 /* PiggyTests */,
 				EBCBCCD92D288F5800F16503 /* PiggyUITests */,
+				EBCBCDA72D2CA11B00F16503 /* PiggyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +332,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EBCBCCD82D288F5800F16503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBCBCDA62D2CA11B00F16503 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +369,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBCBCDA42D2CA11B00F16503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +388,11 @@
 			isa = PBXTargetDependency;
 			target = EBCBCCBF2D288F5400F16503 /* Piggy */;
 			targetProxy = EBCBCCDB2D288F5800F16503 /* PBXContainerItemProxy */;
+		};
+		EBCBCDBD2D2CA11F00F16503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBCBCDA72D2CA11B00F16503 /* PiggyWidgetExtension */;
+			targetProxy = EBCBCDBC2D2CA11F00F16503 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Piggy/Piggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Piggy/Preview Content\"";
@@ -404,7 +533,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Piggy/Piggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Piggy/Preview Content\"";
@@ -434,7 +564,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,6 +650,64 @@
 			};
 			name = Release;
 		};
+		EBCBCDC12D2CA11F00F16503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PiggyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HY8S2WXJ2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PiggyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PiggyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngen.Piggy.PiggyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBCBCDC22D2CA11F00F16503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PiggyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HY8S2WXJ2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PiggyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PiggyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ngen.Piggy.PiggyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +743,15 @@
 			buildConfigurations = (
 				EBCBCCEB2D288F5800F16503 /* Debug */,
 				EBCBCCEC2D288F5800F16503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBCBCDC02D2CA11F00F16503 /* Build configuration list for PBXNativeTarget "PiggyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBCBCDC12D2CA11F00F16503 /* Debug */,
+				EBCBCDC22D2CA11F00F16503 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -38,6 +38,8 @@ class DataManager: ObservableObject {
     private let goalsKey = "piggy_goals"                    // Added prefix
     private let transactionsKey = "piggy_transactions"      // Added prefix
     
+    private let sharedDefaults = UserDefaults(suiteName: "group.com.ngen.piggy")
+    
     private init() {
         print("DataManager initializing...")
         loadData()
@@ -85,6 +87,7 @@ class DataManager: ObservableObject {
         do {
             let goalsData = try JSONEncoder().encode(goals)
             UserDefaults.standard.set(goalsData, forKey: goalsKey)
+            sharedDefaults?.set(goalsData, forKey: goalsKey)
             print("Successfully encoded and saved \(goals.count) goals")
             UserDefaults.standard.synchronize()
         } catch {
